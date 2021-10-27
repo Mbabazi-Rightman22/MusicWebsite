@@ -1,2 +1,2 @@
 # MusicWebsite
-music-web-site in in JSF
+music-web-site built in JSF
