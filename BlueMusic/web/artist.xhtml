@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+         <div class="bg-blue-600 flex justify-between items-center p-2">
+            <div>
+                <img src="./img/logon.jpeg" alt="logo" class="rounded-full" width="50" height="50" />
+            </div>
+            <div>
+                <h:form>
+                    <h:inputText class="bg-transparent border-2 border-white w-96" value="Search" title="Search"/> 
+                    <h:commandButton action="Search" class="text-white font-semibold bg-transparent" value="Search"/> 
+                </h:form>  
+            </div>
+            <div class=" w-2/4 flex justify-evenly text-white ">
+                <h:link outcome="index.xhtml" class="capitalize hover:bg-blue-900 " value="Home"/>
+                <h:link outcome="artist.xhtml" class="capitalize hover:bg-blue-900" value="Artists"/>
+                <h:link outcome="songList.xhtml" class="capitalize hover:bg-blue-900" value="Playlist"/>
+                <h:link outcome="upload.xhtml" class="capitalize hover:bg-blue-900" value="Upload music"/>
+                <button class="bg-gray-200 p-2 rounded-lg text-black font-black">Login</button>
+            </div>
+        </div>
+         <div class="p-2 bg-gray-600 sh text-center"> 
+                <img src="./img/chris.png" alt="CB" width="200" height="200" /> 
+         </div>
+        <div class="font-bold text-2xl p-2">
+            <p>NAME:CHRIS BROWN</p>    
+        </div>
+        <div class="p-2 mt-4 font-mono" >
+                    <ol type="i" >
+                        <li>With You </li>
+                        <li>Turn up the music</li>
+                        <li>Forever</li>
+                        <li>With You </li>
+                        <li>Turn up the music</li>
+                        <li>Forever</li>
+                        <li>With You </li>
+                        <li>Turn up the music</li>
+                        <li>Forever</li>
+                        <li>With You </li>
+                        <li>Turn up the music</li>
+                        <li>Forever</li>
+                        <li>With You </li>
+                        <li>Turn up the music</li>
+                        <li>Forever</li>
+                        
+                    </ol>
+                </div>
+        
+         <div class="bg-blue-600 flex mt-10 justify-between h-28 p-4">
+            <div class="w-1/4">
+                <a href="#" class="font-bold capitalize">Contact</a>
+                <a href="#">About us</a>
+            </div>
+            <div>
+                <a href="#">Contact</a>
+                 <a href="#">About us</a>
+            </div>
+        </div>
+        
+    </h:body>
+</html>
+

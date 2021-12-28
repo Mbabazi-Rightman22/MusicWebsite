@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+       xmlns:f="http://java.sun.com/jsf/core"  
+       >
+    <h:head>
+        <title>Facelet Title</title>
+              <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+        <div class="bg-blue-600 flex justify-between items-center p-2">
+            <div>
+                <img src="./img/logon.jpeg" alt="logo" class="rounded-full" width="50" height="50" />
+            </div>
+            <div>
+                <h:form>
+                    <h:inputText class="bg-transparent border-2 border-white w-96" value="Search" title="Search"/> 
+                    <h:commandButton action="Search" class="text-white font-semibold bg-transparent" value="Search"/> 
+                </h:form>  
+            </div>
+            <div class=" w-2/4 flex justify-evenly text-white ">
+                <h:link outcome="index.xhtml" class="capitalize hover:bg-blue-900 " value="Home"/>
+                <h:link outcome="artist.xhtml" class="capitalize hover:bg-blue-900" value="Artists"/>
+                <h:link outcome="songList.xhtml" class="capitalize hover:bg-blue-900" value="Playlist"/>
+                 <h:button outcome="login.xhtml" class="bg-gray-200 p-2 rounded-lg text-black font-black" value="Login"/>
+            </div>
+        </div>
+        <f:view>
+
+
+            <h:form enctype="multipart/form-data">
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                     <h:outputLabel value="Song Name:" for="name" />
+                     <h:inputText id="name" value="#{songM.song.songname}" title="Title" />
+                     <h:outputLabel value="Genre:" for="genre" />
+                     <h:inputText id="genre" value="#{songM.song.genre}" title="Genre" />
+                    <h:outputLabel value=" upload audio:"  for="audio" />
+                    <p:fileUpload id="audio" mode="simple" skinSimple="true" value="#{songM.file}" title="Audio" />
+                    <h:outputLabel value="Artist Name:" for="artist" />
+                    <h:inputText id="artist" value="#{songM.song.artist}" title="artist" />
+                    <h:commandButton action="#{songM.create()}" value="Save"/>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+        <div class="bg-blue-600 flex mt-10 justify-between h-28 p-4">
+            <div class="w-1/4">
+                <a href="#" class="font-bold capitalize">Contact</a>
+                <a href="#">About us</a>
+            </div>
+            <div>
+                <a href="#">Contact</a>
+                 <a href="#">About us</a>
+            </div>
+        </div>
+    </h:body>
+</html>
+
